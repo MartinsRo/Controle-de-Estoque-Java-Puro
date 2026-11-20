@@ -3,12 +3,10 @@ package br.com.meva.estoque.servico;
 import br.com.meva.estoque.modelo.Produtos;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class MenuPrincipal {
     int opcoa = 0;
-    int tipoProduto = 0;
     Scanner scanner = new Scanner(System.in);
     ArrayList<Produtos> listaDeProdutos = new ArrayList<>();
 
@@ -39,8 +37,7 @@ public class MenuPrincipal {
             opcoa = scanner.nextInt();
             switch (opcoa) {
                 case 1: {
-                    MenuTipoProduto menuTipoProduto = new MenuTipoProduto();
-                    menuTipoProduto.exibirMenu(scanner, listaDeProdutos);
+                    MenuTipoProduto.exibirMenu(scanner, listaDeProdutos);
                     break;
                 }
                 case 2: {
@@ -55,9 +52,15 @@ public class MenuPrincipal {
                 case 4: {
                     BuscaNome buscaNome = new BuscaNome();
                     buscaNome.buscarProdutoPorCodigo(listaDeProdutos, scanner);
+                    break;
                 }
                 case 5: {
-
+                    RemoverProduto removerProduto = new RemoverProduto();
+                    removerProduto.excluirProduto(listaDeProdutos, scanner);
+                    break;
+                }
+                case 6: {
+                    break;
                 }
             }
         }

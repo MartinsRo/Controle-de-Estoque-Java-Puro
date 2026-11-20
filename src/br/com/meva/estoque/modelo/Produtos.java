@@ -27,6 +27,7 @@ public class Produtos {
     }
 
     public void coletarDadosBase() {
+        System.out.println("---Adicionar um produto!---");
         System.out.println("Qual o nome do produto?");
         this.nomeProduto = scanner.nextLine();
         System.out.println("Qual o valor do produto?");

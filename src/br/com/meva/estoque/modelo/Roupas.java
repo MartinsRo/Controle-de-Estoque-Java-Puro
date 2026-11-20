@@ -20,8 +20,9 @@ public class Roupas extends Produtos{
 
     public void adicionarRoupas(List<Produtos> listaDeProdutos){
         super.coletarDadosBase();
+        scanner.nextLine();
         System.out.println("Qual o tamanho dessa roupa?");
-        this.tamanho = scanner.next();
+        this.tamanho = scanner.nextLine();
         System.out.println("Descrição da roupa?");
         this.descricao = scanner.nextLine();
         System.out.println("Qual a cor?");
